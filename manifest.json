@@ -1,7 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "SearchAI",
-    ""
+    "name": "AI Story",
+    "version": "0.1.0",
+    "description": "Turn your webpage into an AI-generated story",
+    "permissions": [
+        "storage",
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "default_title": "AI Story",
+    "default_popup": "popup.html",
+    "manifest_version": 3
 }
 /*
 
